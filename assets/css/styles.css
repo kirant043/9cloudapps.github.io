@@ -289,6 +289,8 @@ section.why-choose {
   position: relative;
   height: 686px;
   z-index: 10;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 section.why-choose:after {
@@ -712,6 +714,10 @@ section.strengths .strength-carousel .owl-carousel .owl-nav .owl-next:hover {
   background-color: transparent !important;
 }
 
+section.partnerships {
+  margin-bottom: 30px;
+}
+
 section.partnerships .title {
   font-size: 44px;
   margin-bottom: 30px;
@@ -784,7 +790,7 @@ section.connect .contact-box .get-in-touch form textarea {
 }
 
 section.case-studies {
-  padding-top: 150px;
+  padding-top: 120px;
   margin-bottom: 0px;
   position: relative;
 }
@@ -803,7 +809,7 @@ section.case-studies:after {
 
 section.case-studies .title {
   font-size: 44px;
-  margin-bottom: 130px;
+  margin-bottom: 30px;
   position: relative;
   z-index: 2;
   color: #FFFFFF;
@@ -817,7 +823,7 @@ section.case-studies .services-block {
 }
 
 section.case-studies .services-block .half-services .single-service {
-  min-height: 310px;
+  min-height: 200px;
 }
 
 section.case-studies .services-block .half-services .col-6:nth-child(even) {
@@ -836,6 +842,8 @@ section.case-studies .services-block .single-service {
 section.case-studies .services-block .single-service .icon {
   padding-left: 10px;
   padding-right: 10px;
+  width: 50px;
+  height: 50px;
 }
 
 section.case-studies .services-block .single-service .content {
@@ -845,6 +853,11 @@ section.case-studies .services-block .single-service .content {
 section.case-studies .services-block .single-service .content .icon {
   margin-bottom: 15px;
   padding-left: 0;
+}
+
+section.case-studies .services-block .single-service .content .icon img {
+  width: 50px;
+  height: 50px;
 }
 
 section.case-studies .services-block .single-service .content h4 {
@@ -1162,5 +1175,11 @@ section.case-studies .services-block .single-service .content p {
   }
   footer ul.footer-menu li:first-child {
     margin-left: 40px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  section.banner .banner-img {
+    min-height: 360px;
   }
 }
