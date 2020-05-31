@@ -190,15 +190,16 @@ section.banner {
   height: 100vh;
   background: #000;
   position: relative;
-  padding-top: 135px;
+  margin-bottom: 50px;
 }
 
 section.banner .banner-img {
   background-image: url("../images/Group 1967.svg");
-  background-size: contain;
+  background-size: 50%;
   background-repeat: no-repeat;
-  background-position: right top;
-  min-height: 450px;
+  background-position: right bottom;
+  min-height: 80vh;
+  padding-top: 100px;
 }
 
 section.banner .banner-img .banner-text {
@@ -216,8 +217,8 @@ section.banner .banner-img .banner-text h3 {
 }
 
 section.banner .banner-clients {
-  margin-top: 40px;
   margin-bottom: 25px;
+  min-height: 20vh;
 }
 
 section.banner .banner-clients img {
@@ -515,9 +516,9 @@ section.about-block {
 
 section.about-block h4 {
   color: #151515;
-  font-size: 36px;
-  line-height: 50px;
-  margin-bottom: 60px;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 20px;
 }
 
 section.about-block .about-text p {
@@ -901,11 +902,12 @@ section.case-studies .services-block .single-service .content p {
   .menu {
     display: none;
   }
-  section.banner {
-    height: auto;
-  }
   section.banner .banner-img {
-    background-position: right bottom;
+    background-position: center bottom;
+    background-size: 90%;
+    padding-top: 130px;
+    min-height: 85vh;
+    margin-bottom: 5vh;
   }
   section.banner .banner-img .banner-text {
     top: 10%;
@@ -916,7 +918,7 @@ section.case-studies .services-block .single-service .content p {
     margin-bottom: 20px;
   }
   section.banner .banner-clients {
-    padding-bottom: 20px;
+    min-height: 10vh;
   }
   section.banner .banner-clients .col:nth-child(4) {
     display: none;
@@ -1031,6 +1033,9 @@ section.case-studies .services-block .single-service .content p {
   section.contact form {
     padding-right: 0;
     margin-bottom: 30px;
+  }
+  section.about-block {
+    margin-top: 130px;
   }
   section.about-block h4 {
     font-size: 24px;
@@ -1175,11 +1180,5 @@ section.case-studies .services-block .single-service .content p {
   }
   footer ul.footer-menu li:first-child {
     margin-left: 40px;
-  }
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1200px) {
-  section.banner .banner-img {
-    min-height: 360px;
   }
 }

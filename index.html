@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>9Cloud Apps</title>
@@ -55,7 +55,7 @@
                 <div class="col-12 col-md-6">
                     <div class="banner-text">
                         <h3>Modernize Infrastructure and Applications with our Cloud Factory Solutions</h3>
-                        <button class="white-btn">Know More</button>
+                        <a href="about.html" class="white-btn">Know More</a>
                     </div>
                 </div>
             </div>
@@ -80,33 +80,44 @@
         </div>
 
     </section>
-    <section class="why-choose">
-        <div class="container">
+    <section class="strengths">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="banner-text">
-                        <h3>Why choose 9CloudOps</h3>
-                        <p>Our success stems from a well define Cloud Operating Model, a framework that puts together the core elements like People,Processes and Technology to Digitalize customer business.</p>
-                        <button class="white-btn">Know More</button>
-                    </div>
+                <div class="col">
+                    <h4 class="title">Our Core Strengths</h4>
                 </div>
-                <div class="col-12 col-md-6">
-                    <div class="text-points">
-                        <div class="single-text">
-                            <span>01</span>
-                            <p>Understand the Customers Pain point to put together a Vision, Strategy & Business Enablement.</p>
+            </div>
+            <div class="row strength-carousel">
+                <div class="col-12 col-md-2"></div>
+                <div class="col-12 col-md-10">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item" style="width:150px">
+                            <span>1</span>
+                            <p>Cloud Solutions /Migrations & Consultation Services</p>
                         </div>
-                        <div class="single-text">
-                            <span>02</span>
-                            <p>Free Engagement for a Week.</p>
+                        <div class="item" style="width:150px">
+                            <span>2</span>
+                            <p>DevOps Solutions & Consultation Services</p>
                         </div>
-                        <div class="single-text">
-                            <span>03</span>
-                            <p>Engagement Beyond One Week at an agreed USD/Hour which includes Discovery Session</p>
+                        <div class="item" style="width:150px">
+                            <span>3</span>
+                            <p>Centralized Cloud Security & Governance</p>
                         </div>
-                        <div class="single-text">
-                            <span>04</span>
-                            <p>Understanding the Customers Business, Developing a Customer Centric University Model that helps Technical/ Functional resources</p>
+                        <div class="item" style="width:150px">
+                            <span>4</span>
+                            <p>Cloud Agnostic Solutions</p>
+                        </div>
+                        <div class="item" style="width:150px">
+                            <span>5</span>
+                            <p>Infrastructure Orchestration & Automation</p>
+                        </div>
+                        <div class="item" style="width:150px">
+                            <span>6</span>
+                            <p>Cloud Operating Model Framework</p>
+                        </div>
+                        <div class="item" style="width:150px">
+                            <span>7</span>
+                            <p>Serverless Micro-Services & Container Based Architectures</p>
                         </div>
                     </div>
                 </div>
@@ -139,7 +150,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
     <script type="text/javascript">
         $(window).scroll(function() {    
             var scroll = $(window).scrollTop();
@@ -155,17 +166,24 @@
             source: '.menu',
             side: 'right'
         });
-        $("#testimonial-slider").owlCarousel({
-            items:1,
-            itemsDesktop:[840,1],
-            itemsDesktopSmall:[840,1],
-            itemsTablet:[768,1],
-            pagination:true,
-            navigation:false,
-            navigationText:["",""],
-            slideSpeed:100000,
-            autoPlay:true
-        });
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:30,
+            dots: false,
+            nav:true,
+            items:6,
+            navText: ['',''],
+            responsive:{
+                0:{
+                    items:2,
+                },
+                768:{
+                    items:6,
+                    nav:true,
+                    loop:false
+                }
+            }
+        })
         $('img.svg').each(function(){
             var $img = $(this);
             var imgID = $img.attr('id');
